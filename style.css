@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background: #C8E0F4;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  position: fixed;
+}
+
+.clock {
+  position: absolute;
+  top: 200px;
+  left: 33%;
+  width: 33%;
+  padding-bottom: 33%;
+  border-radius: 50%;
+  background: #fff url(/assets/clock.svg) no-repeat center;
+  background-size: 88%;
+}
+
+.clock::after {
+  background: #C8E0F4;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 4%;
+  height: 4%;
+  z-index: 10;
+}
+
+.seconds-container {
+  width: 35%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.seconds {
+  background: #C7EFCF;
+  width: 1.5%;
+  height: 42%;
+  position: absolute;
+  left: 49.25%;
+  top: 20%;
+  transform-origin: 50% 72%;
+  z-index: 8;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.seconds-container {
+  transition: transform 0.2s cubic-bezier(.4,2.08,.55,.44);
+}
+
+button {
+  display: block;
+  margin: auto;
+  margin-top: 150px;
+  color: #202129;
+  background-color: #f2f2f2;
+  padding: 10px 40px 10px 40px;
+  border: 0 none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 2px 5px 10px #999999;
+  transition: all 150ms linear;
+  font-style: oblique;
+  font-weight: bolder;
+}
+
+button:hover {
+  color: #202129;
+  background-color: #e1e2e2;
+  box-shadow: 2px 5px 5px #999999;
+  transition: all 150ms linear;
+  }
+
+button:active {
+    background-color: #a1a1a1;
+  }
+
+button:focus {
+  outline:0;
+}
