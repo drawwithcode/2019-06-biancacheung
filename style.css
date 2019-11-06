@@ -20,7 +20,7 @@ body {
   width: 33%;
   padding-bottom: 33%;
   border-radius: 50%;
-  background: #fff url(/clock.svg) no-repeat center;
+  background: #fff url("/clock.svg") no-repeat center;
   background-size: 88%;
 }
 
